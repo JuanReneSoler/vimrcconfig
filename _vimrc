@@ -221,6 +221,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 " devicons config
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['cs'] = 'c#'
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['js'] = 'js'
 
 let g:vimspector_enable_mappings = 'HUMAN'
 
