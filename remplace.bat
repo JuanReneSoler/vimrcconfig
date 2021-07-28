@@ -1,0 +1,6 @@
+
+
+
+xcopy _vimrc %homepath%
+
+
