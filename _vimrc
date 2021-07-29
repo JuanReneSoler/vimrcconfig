@@ -229,5 +229,5 @@ let g:vimspector_enable_mappings = 'HUMAN'
 " NerdTree map keys
 map <S-Tab> :NERDTree<CR>
 imap <C-s>  <ESC>:w<CR>
-
+map <C-s> :w<CR>
 
