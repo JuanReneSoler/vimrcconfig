@@ -231,6 +231,6 @@ map <S-TAB> :NERDTreeToggle<CR>
 imap <S-TAB> <ESC>:w<CR>:NERDTreeToggle<CR>
 "control + s
 imap <C-s> <ESC>:w<CR>i
-" map <C-s> :w<CR>
+map <C-s> :w<CR>
 
 
