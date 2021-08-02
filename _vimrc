@@ -230,7 +230,7 @@ let g:vimspector_enable_mappings = 'HUMAN'
 map <S-TAB> :NERDTreeToggle<CR>
 imap <S-TAB> <ESC>:w<CR>:NERDTreeFocus<CR>
 "control + s
-imap <C-s> <ESC>:w<CR>i
+imap <C-s> <ESC>:w<CR>a
 map <C-s> :w<CR>
 
 
