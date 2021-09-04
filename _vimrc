@@ -226,10 +226,15 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['js'] = 'js'
 let g:vimspector_enable_mappings = 'HUMAN'
 
 
-"shift + tabulator
-map <S-TAB> :NERDTreeToggle<CR>
-imap <S-TAB> <ESC>:w<CR>:NERDTreeFocus<CR>
-"control + s
+"shift + v to toggle nerdtree
+map <S-V> :NERDTreeToggle<CR>
+imap <S-V> <ESC>:w<CR>:NERDTreeToggle<CR>
+
+"shift + f to focus nerdtree
+map <S-F> :NERDTreeFocus<CR>
+imap <S-F> <ESC>:w<CR>:NERDTreeFocus<CR>
+
+"control + s to save changes
 imap <C-s> <ESC>:w<CR>a
 map <C-s> :w<CR>
 
