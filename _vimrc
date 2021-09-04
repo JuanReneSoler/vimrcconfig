@@ -52,7 +52,6 @@ scriptencoding utf-8
 
 set completeopt=menuone,noinsert,noselect,popuphidden
 set completepopup=highlight:Pmenu,border:off
-
 set backspace=indent,eol,start
 set expandtab
 set shiftround
@@ -226,13 +225,12 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['js'] = 'js'
 let g:vimspector_enable_mappings = 'HUMAN'
 
 
-"alt + v to toggle nerdtree
-map <A-v> :NERDTreeToggle<CR>
-imap <A-v> <ESC>:w<CR>:NERDTreeToggle<CR>
 
-"alt + f to focus nerdtree
-map <A-f> :NERDTreeFocus<CR>
-imap <A-v> <ESC>:w<CR>:NERDTreeFocus<CR>
+map <A-r> :NERDTreeFocus<CR>
+imap <A-r> <ESC>:w<CR>:NERDTreeFocus<CR>
+
+map <A-t> :NERDTreeToggle<CR>
+imap <A-t> <ESC>:w<CR>:NERDTreeToggle<CR>
 
 "control + s to save changes
 imap <C-s> <ESC>:w<CR>a
