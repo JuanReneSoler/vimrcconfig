@@ -202,6 +202,7 @@ let g:OmniSharp_highlight_groups = {
 " NerdTree Config
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeWinSize=40
 
 " nerdtree-git-plugin configuration
 let g:NERDTreeGitStatusIndicatorMapCustom = {
