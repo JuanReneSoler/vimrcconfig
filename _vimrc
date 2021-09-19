@@ -38,6 +38,28 @@ let g:gruvbox_contrast_dark="hard"
 "NERDTree configuration
 let NERDTreeQuitOnOpen=1 "cierra nerdtree automaticamente se habre un archivo
 let g:NERDTreeWinSize=40
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+
+" nerdtree-git-plugin configuration
+let g:NERDTreeGitStatusIndicatorMapCustom = {
+                \ 'Modified'  :'✹',
+                \ 'Staged'    :'✚',
+                \ 'Untracked' :'✭',
+                \ 'Renamed'   :'➜',
+                \ 'Unmerged'  :'═',
+                \ 'Deleted'   :'✖',
+                \ 'Dirty'     :'✗',
+                \ 'Ignored'   :'☒',
+                \ 'Clean'     :'✔︎',
+                \ 'Unknown'   :'?',
+                \ }
+
+" devicons config
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['cs'] = 'c#'
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['js'] = 'js'
+
 
 "key maps
 let mapleader=" " "tecla lider para los atajos de teclado
