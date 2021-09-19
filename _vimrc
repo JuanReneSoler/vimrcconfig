@@ -1,3 +1,19 @@
+"cargando pluggind con el gestor de paquetes Plug
+call plug#begin('~/vimfiles/plugged')
+
+"Theme (gruvbox)
+Plug 'morhetz/gruvbox'
+"Plug 'gruvbox-community/gruvbox'
+
+
+"NerdTree Plug
+Plug 'preservim/nerdtree' |
+            \ Plug 'Xuyuanp/nerdtree-git-plugin' |
+            \ Plug 'ryanoasis/vim-devicons'
+
+
+call plug#end()
+
 set number "setea numero a las lineas de vim
 set mouse=a "habilita el uso del mouse
 set numberwidth=1 "setea el ancho de los numeros
@@ -15,30 +31,15 @@ set laststatus=2 "setear que la barra iferior siempre sea visible
 set bs=indent,eol,start "setea las funcionalidades de la tecla backspace
 set t_Co=256 "configura la consola para que use 256 colores //necesario para usar gruvbox
 
-"cargando pluggind con el gestor de paquetes Plug
-call plug#begin('~/vimfiles/plugged')
-
-"Theme (gruvbox)
-Plug 'morhetz/gruvbox'
-"Plug 'gruvbox-community/gruvbox'
-
-
-"NerdTree Plug
-Plug 'preservim/nerdtree' |
-            \ Plug 'Xuyuanp/nerdtree-git-plugin' |
-            \ Plug 'ryanoasis/vim-devicons'
-
-
-call plug#end()
-
+"Theme config
 colorscheme gruvbox
 let g:gruvbox_contrast_dark="hard"
 
 "NERDTree configuration
 let NERDTreeQuitOnOpen=1 "cierra nerdtree automaticamente se habre un archivo
+let g:NERDTreeWinSize=40
 
 "key maps
-
 let mapleader=" " "tecla lider para los atajos de teclado
 
 "nerdtree key maps
