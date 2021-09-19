@@ -37,9 +37,9 @@ let g:gruvbox_contrast_dark="hard"
 
 "NERDTree configuration
 let NERDTreeQuitOnOpen=1 "cierra nerdtree automaticamente se habre un archivo
-let g:NERDTreeWinSize=40
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeWinSize=40 "modifica el ancho de la ventana de NERDTree
+let g:NERDTreeDirArrowExpandable = '▸' "caracter asignado cuando un directorio esta cerrado
+let g:NERDTreeDirArrowCollapsible = '▾' "caracter asignado para cuando un directorio esta abierto
 
 " nerdtree-git-plugin configuration
 let g:NERDTreeGitStatusIndicatorMapCustom = {
