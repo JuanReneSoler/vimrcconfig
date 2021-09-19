@@ -13,9 +13,15 @@ set relativenumber "setea que se muestren las lineas por debajo y por encima de 
 set laststatus=2 "setear que la barra iferior siempre sea visible
 "set noshowmode "setea que la barra de comandos no se muestre en el modo insertar
 set bs=indent,eol,start "setea las funcionalidades de la tecla backspace
+set t_Co=256 "configura la consola para que use 256 colores //necesario para usar gruvbox
 
 "cargando pluggind con el gestor de paquetes Plug
 call plug#begin('~/vimfiles/plugged')
+
+"Theme (gruvbox)
+Plug 'morhetz/gruvbox'
+"Plug 'gruvbox-community/gruvbox'
+
 
 "NerdTree Plug
 Plug 'preservim/nerdtree' |
@@ -24,6 +30,9 @@ Plug 'preservim/nerdtree' |
 
 
 call plug#end()
+
+colorscheme gruvbox
+let g:gruvbox_contrast_dark="hard"
 
 "NERDTree configuration
 let NERDTreeQuitOnOpen=1 "cierra nerdtree automaticamente se habre un archivo
