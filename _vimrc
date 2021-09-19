@@ -11,6 +11,8 @@ Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin' |
             \ Plug 'ryanoasis/vim-devicons'
 
+"Omnisharp-Vim
+Plug 'OmniSharp/omnisharp-vim'
 
 call plug#end()
 
@@ -30,6 +32,7 @@ set laststatus=2 "setear que la barra iferior siempre sea visible
 "set noshowmode "setea que la barra de comandos no se muestre en el modo insertar
 set bs=indent,eol,start "setea las funcionalidades de la tecla backspace
 set t_Co=256 "configura la consola para que use 256 colores //necesario para usar gruvbox
+set background=dark "asigna color oscuro al background de la consola"
 
 "Theme config
 colorscheme gruvbox
