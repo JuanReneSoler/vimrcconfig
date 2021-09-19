@@ -25,7 +25,11 @@ Plug 'preservim/nerdtree' |
 
 call plug#end()
 
+"NERDTree configuration
+let NERDTreeQuitOnOpen=1 "cierra nerdtree automaticamente se habre un archivo
+
 "key maps
+let mapleader=" " "tecla lider para los atajos de teclado
 "nerdtree key maps
 map <S-TAB> :NERDTreeFocus<CR>
 imap <S-TAB> <ESC>:w<CR>:NERDTreeFocus<CR>
@@ -33,5 +37,4 @@ imap <S-TAB> <ESC>:w<CR>:NERDTreeFocus<CR>
 "control + s to save changes
 imap <C-s> <ESC>:w<CR>a
 map <C-s> :w<CR>
-
 
