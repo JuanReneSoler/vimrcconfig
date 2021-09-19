@@ -1,237 +1,32 @@
-" Set this to 1 to use ultisnips for snippet handling
-let s:using_snippets = 0
+set number "setea numero a las lineas de vim
+set mouse=a "habilita el uso del mouse
+set numberwidth=1 "setea el ancho de los numeros
+set clipboard=unnamed "setea que lo que compiemos quede en el clipboard de SO
+syntax enable "habilita el resaltado de syntaxis
+set showcmd "setea que se muestren los comando que se estan ejecutando
+set ruler "setea que se muestre la posicion en la que esta el cursor
+set cursorline "marca la linea en la que se encuentra el cursor
+set encoding=utf-8 "setea en encoding de archivos
+set showmatch "setea el parentesis que cierra al posicionarte sobre alguno
+set sw=2 "setea el numero de espacios por indentacion
+set relativenumber "setea que se muestren las lineas por debajo y por encima de la posicion del cursor
+set laststatus=2 "setear que la barra iferior siempre sea visible
+set noshowmode "setea que la barra de comandos no se muestre en el modo insertar
+set bs=indent,eol,start "setea las funcionalidades de la tecla backspace
 
-" vim-plug: {{{
+"cargando pluggind con el gestor de paquetes Plug
 call plug#begin('~/vimfiles/plugged')
-
-Plug 'OmniSharp/omnisharp-vim'
-
-" Mappings, code-actions available flag and statusline integration
-Plug 'nickspoons/vim-sharpenup'
-
-" Linting/error highlighting
-Plug 'dense-analysis/ale'
-
-" Vim FZF integration, used as OmniSharp selector
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
-
-" Autocompletion
-Plug 'prabirshrestha/asyncomplete.vim'
-
-" Colorscheme
-Plug 'gruvbox-community/gruvbox'
-
-" Statusline
-Plug 'itchyny/lightline.vim'
-Plug 'shinchu/lightline-gruvbox.vim'
-Plug 'maximbaz/lightline-ale'
 
 "NerdTree Plug
 Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin' |
             \ Plug 'ryanoasis/vim-devicons'
 
-"vim inspector
-Plug 'puremourning/vimspector'
-
-" Snippet support
-if s:using_snippets
-  Plug 'sirver/ultisnips'
-endif
 
 call plug#end()
-" }}}
 
-" Settings: {{{
-filetype indent plugin on
-if !exists('g:syntax_on') | syntax enable | endif
-set encoding=utf-8
-scriptencoding utf-8
-
-
-set completeopt=menuone,noinsert,noselect,popuphidden
-set completepopup=highlight:Pmenu,border:off
-set backspace=indent,eol,start
-set expandtab
-set shiftround
-set shiftwidth=4
-set softtabstop=-1
-set tabstop=8
-set textwidth=80
-set title
-
-set hidden
-set nofixendofline
-set nostartofline
-set splitbelow
-set splitright
-
-set hlsearch
-set incsearch
-set laststatus=2
-set number
-set noruler
-set noshowmode
-set signcolumn=yes
-
-set mouse=a
-set updatetime=1000
-" }}}
-
-" Colors: {{{
-augroup ColorschemePreferences
-  autocmd!
-  " These preferences clear some gruvbox background colours, allowing transparency
-  "autocmd ColorScheme * highlight Normal     ctermbg=NONE guibg=NONE
-  autocmd ColorScheme * highlight SignColumn ctermbg=NONE guibg=NONE
-  autocmd ColorScheme * highlight Todo       ctermbg=NONE guibg=NONE
-  " Link ALE sign highlights to similar equivalents without background colours
-  autocmd ColorScheme * highlight link ALEErrorSign   WarningMsg
-  autocmd ColorScheme * highlight link ALEWarningSign ModeMsg
-  autocmd ColorScheme * highlight link ALEInfoSign    Identifier
-augroup END
-
-" Use truecolor in the terminal, when it is supported
-if has('termguicolors')
-  set termguicolors
-endif
-
-set background=dark
-colorscheme gruvbox
-" }}}
-
-" ALE: {{{
-let g:ale_sign_error = '•'
-let g:ale_sign_warning = '•'
-let g:ale_sign_info = '·'
-let g:ale_sign_style_error = '·'
-let g:ale_sign_style_warning = '·'
-
-let g:ale_linters = { 'cs': ['OmniSharp'] }
-" }}}
-
-" Asyncomplete: {{{
-let g:asyncomplete_auto_popup = 1
-let g:asyncomplete_auto_completeopt = 0
-" }}}
-
-" Sharpenup: {{{
-" All sharpenup mappings will begin with `<Space>os`, e.g. `<Space>osgd` for
-" :OmniSharpGotoDefinition
-let g:sharpenup_map_prefix = '<Space>os'
-
-let g:sharpenup_statusline_opts = { 'Text': '%s (%p/%P)' }
-let g:sharpenup_statusline_opts.Highlight = 0
-
-augroup OmniSharpIntegrations
-  autocmd!
-  autocmd User OmniSharpProjectUpdated,OmniSharpReady call lightline#update()
-augroup END
-" }}}
-
-" Lightline: {{{
-let g:lightline = {
-\ 'colorscheme': 'gruvbox',
-\ 'active': {
-\   'right': [
-\     ['linter_checking', 'linter_errors', 'linter_warnings', 'linter_infos', 'linter_ok'],
-\     ['lineinfo'], ['percent'],
-\     ['fileformat', 'fileencoding', 'filetype', 'sharpenup']
-\   ]
-\ },
-\ 'inactive': {
-\   'right': [['lineinfo'], ['percent'], ['sharpenup']]
-\ },
-\ 'component': {
-\   'sharpenup': sharpenup#statusline#Build()
-\ },
-\ 'component_expand': {
-\   'linter_checking': 'lightline#ale#checking',
-\   'linter_infos': 'lightline#ale#infos',
-\   'linter_warnings': 'lightline#ale#warnings',
-\   'linter_errors': 'lightline#ale#errors',
-\   'linter_ok': 'lightline#ale#ok'
-  \  },
-  \ 'component_type': {
-  \   'linter_checking': 'right',
-  \   'linter_infos': 'right',
-  \   'linter_warnings': 'warning',
-  \   'linter_errors': 'error',
-  \   'linter_ok': 'right'
-\  }
-\}
-" Use unicode chars for ale indicators in the statusline
-let g:lightline#ale#indicator_checking = "\uf110 "
-let g:lightline#ale#indicator_infos = "\uf129 "
-let g:lightline#ale#indicator_warnings = "\uf071 "
-let g:lightline#ale#indicator_errors = "\uf05e "
-let g:lightline#ale#indicator_ok = "\uf00c "
-" }}}
-
-" OmniSharp: {{{
-let g:OmniSharp_popup_position = 'peek'
-if has('nvim')
-  let g:OmniSharp_popup_options = {
-  \ 'winhl': 'Normal:NormalFloat'
-  \}
-else
-  let g:OmniSharp_popup_options = {
-  \ 'highlight': 'Normal',
-  \ 'padding': [0, 0, 0, 0],
-  \ 'border': [1]
-  \}
-endif
-let g:OmniSharp_popup_mappings = {
-\ 'sigNext': '<C-n>',
-\ 'sigPrev': '<C-p>',
-\ 'pageDown': ['<C-f>', '<PageDown>'],
-\ 'pageUp': ['<C-b>', '<PageUp>']
-\}
-
-if s:using_snippets
-  let g:OmniSharp_want_snippet = 1
-endif
-
-let g:OmniSharp_highlight_groups = {
-\ 'ExcludedCode': 'NonText'
-\}
-" }}}
-
-
-" NerdTree Config
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-let g:NERDTreeWinSize=40
-
-" nerdtree-git-plugin configuration
-let g:NERDTreeGitStatusIndicatorMapCustom = {
-                \ 'Modified'  :'✹',
-                \ 'Staged'    :'✚',
-                \ 'Untracked' :'✭',
-                \ 'Renamed'   :'➜',
-                \ 'Unmerged'  :'═',
-                \ 'Deleted'   :'✖',
-                \ 'Dirty'     :'✗',
-                \ 'Ignored'   :'☒',
-                \ 'Clean'     :'✔︎',
-                \ 'Unknown'   :'?',
-                \ }
-
-" devicons config
-let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
-let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['cs'] = 'c#'
-let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['js'] = 'js'
-
-let g:vimspector_enable_mappings = 'HUMAN'
-
-
-
-
-
-"map <S-HOME> :NERDTreeToggle<CR>
-"imap <S-HOME> <ESC>:w<CR>:NERDTreeToggle<CR>
-
+"key maps
+"nerdtree key maps
 map <S-TAB> :NERDTreeFocus<CR>
 imap <S-TAB> <ESC>:w<CR>:NERDTreeFocus<CR>
 
