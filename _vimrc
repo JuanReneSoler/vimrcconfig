@@ -45,6 +45,7 @@ set noshowmode "setea que la barra de comandos no se muestre en el modo insertar
 set bs=indent,eol,start "setea las funcionalidades de la tecla backspace
 set t_Co=256 "configura la consola para que use 256 colores //necesario para usar gruvbox
 set background=dark "asigna color oscuro al background de la consola"
+set updatetime=1000
 
 
 "Theme config
