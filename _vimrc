@@ -14,6 +14,17 @@ Plug 'preservim/nerdtree' |
 "Omnisharp-Vim
 Plug 'OmniSharp/omnisharp-vim'
 
+"Autocompletion
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'mattn/emmet-vim'
+
+" Statusline
+Plug 'itchyny/lightline.vim'
+Plug 'shinchu/lightline-gruvbox.vim'
+Plug 'maximbaz/lightline-ale'
+
+
+
 call plug#end()
 
 set number "setea numero a las lineas de vim
@@ -29,10 +40,12 @@ set showmatch "setea el parentesis que cierra al posicionarte sobre alguno
 set sw=2 "setea el numero de espacios por indentacion
 set relativenumber "setea que se muestren las lineas por debajo y por encima de la posicion del cursor
 set laststatus=2 "setear que la barra iferior siempre sea visible
-"set noshowmode "setea que la barra de comandos no se muestre en el modo insertar
+set noshowmode "setea que la barra de comandos no se muestre en el modo insertar
 set bs=indent,eol,start "setea las funcionalidades de la tecla backspace
 set t_Co=256 "configura la consola para que use 256 colores //necesario para usar gruvbox
 set background=dark "asigna color oscuro al background de la consola"
+
+
 
 "Theme config
 colorscheme gruvbox
@@ -62,6 +75,16 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['cs'] = 'c#'
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['js'] = 'js'
+
+"Autocompletion
+let g:asyncomplete_auto_popup = 1
+let g:asyncomplete_auto_completeopt = 0
+set completeopt=menuone,noinsert,noselect,preview
+
+"autocomplete emmet
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+"let g:user_emmet_leader_key='<TAB>'
 
 
 "key maps
