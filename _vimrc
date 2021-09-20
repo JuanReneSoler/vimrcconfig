@@ -85,12 +85,12 @@ set completeopt=menuone,noinsert,noselect,popuphidden "controla los menu de auto
 "Emmet configuration
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
-let g:user_emmet_leader_key='<Tab>'
+let g:user_emmet_leader_key='<Space>'
 
 "key maps
 let mapleader=" " "tecla lider para los atajos de teclado
 
-" Microsoft SQL Server
+"dbext.vim conect to Microsoft SQL Server
 let g:dbext_default_profile_mySql = 'type=SQLSRV:integratedlogin=1:srvname=deresil-05\serversil:dbname=master'
 let g:dbext_default_profile = 'mySql'
 
@@ -98,10 +98,11 @@ let g:dbext_default_profile = 'mySql'
 map <Leader>t :NERDTreeFocus<CR>
 "imap <S-TAB> <ESC>:w<CR>:NERDTreeFocus<CR>
 
-"control + s to save changes
+"save changes key map
 map <Leader>w :w<CR>
 "imap <C-s> <ESC>:w<CR>a
 
+"cerrar key map
 map <Leader>e :q<CR>
 
 "dbext.vim key mappings
