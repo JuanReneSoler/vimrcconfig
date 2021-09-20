@@ -81,7 +81,7 @@ set completeopt=menuone,noinsert,noselect,popuphidden "controla los menu de auto
 "Emmet configuration
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
-let g:user_emmet_leader_key='<c-p>'
+let g:user_emmet_leader_key='<Tab>'
 
 "key maps
 let mapleader=" " "tecla lider para los atajos de teclado
