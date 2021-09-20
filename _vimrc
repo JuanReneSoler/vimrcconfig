@@ -106,7 +106,7 @@ map <Leader>w :w<CR>
 map <Leader>e :q<CR>
 
 "dbext.vim key mappings
-map <F5> <Space>sel
+map <F5> <Space>se
 
 
 
