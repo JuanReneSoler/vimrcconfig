@@ -23,8 +23,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'maximbaz/lightline-ale'
 
-
-
 call plug#end()
 
 set number "setea numero a las lineas de vim
@@ -46,9 +44,8 @@ set t_Co=256 "configura la consola para que use 256 colores //necesario para usa
 set background=dark "asigna color oscuro al background de la consola"
 
 
-
 "Theme config
-colorscheme gruvbox
+colorscheme gruvbox "carga el tema
 let g:gruvbox_contrast_dark="hard"
 
 "NERDTree configuration
@@ -79,7 +76,7 @@ let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['js'] = 'js'
 "Autocompletion
 let g:asyncomplete_auto_popup = 1
 let g:asyncomplete_auto_completeopt = 0
-set completeopt=menuone,noinsert,noselect,preview
+set completeopt=menuone,noinsert,noselect,popuphidden "controla los menu de autocomplecion que salen
 
 "autocomplete emmet
 let g:user_emmet_install_global = 0
