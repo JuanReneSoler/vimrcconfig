@@ -23,6 +23,9 @@ Plug 'itchyny/lightline.vim'
 Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'maximbaz/lightline-ale'
 
+"database
+Plug 'vim-scripts/dbext.vim'
+
 call plug#end()
 
 set number "setea numero a las lineas de vim
@@ -86,6 +89,10 @@ let g:user_emmet_leader_key='<Tab>'
 "key maps
 let mapleader=" " "tecla lider para los atajos de teclado
 
+" Microsoft SQL Server
+let g:dbext_default_profile_mySql = 'type=SQLSRV:integratedlogin=1:srvname=deresil-05\serversil:dbname=master'
+let g:dbext_default_profile = 'mySql'
+
 "nerdtree key maps
 map <Leader>t :NERDTreeFocus<CR>
 "imap <S-TAB> <ESC>:w<CR>:NERDTreeFocus<CR>
@@ -95,4 +102,7 @@ map <Leader>w :w<CR>
 "imap <C-s> <ESC>:w<CR>a
 
 map <Leader>e :q<CR>
+
+
+imap <F5> <Space>sel
 
