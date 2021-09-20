@@ -78,11 +78,10 @@ let g:asyncomplete_auto_popup = 1
 let g:asyncomplete_auto_completeopt = 0
 set completeopt=menuone,noinsert,noselect,popuphidden "controla los menu de autocomplecion que salen
 
-"autocomplete emmet
+"Emmet configuration
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
-"let g:user_emmet_leader_key='<TAB>'
-
+let g:user_emmet_leader_key='<c-p>'
 
 "key maps
 let mapleader=" " "tecla lider para los atajos de teclado
