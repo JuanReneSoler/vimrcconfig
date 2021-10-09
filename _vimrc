@@ -46,7 +46,7 @@ set cursorline "marca la linea en la que se encuentra el cursor
 set encoding=utf-8 "setea en encoding de archivos
 set showmatch "setea el parentesis que cierra al posicionarte sobre alguno
 set sw=4 "setea el numero de espacios por indentacion
-set relativenumber "setea que se muestren las lineas por debajo y por encima de la posicion del cursor
+"set relativenumber "setea que se muestren las lineas por debajo y por encima de la posicion del cursor
 set laststatus=2 "setear que la barra iferior siempre sea visible
 set noshowmode "setea que la barra de comandos no se muestre en el modo insertar
 set bs=indent,eol,start "setea las funcionalidades de la tecla backspace
