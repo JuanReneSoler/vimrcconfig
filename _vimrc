@@ -106,8 +106,8 @@ map <Leader>t :NERDTreeFocus<CR>
 "imap <S-TAB> <ESC>:w<CR>:NERDTreeFocus<CR>
 
 "save changes key map
-map <Leader>w :w<CR>
-"imap <C-s> <ESC>:w<CR>a
+"map <Leader>w :w<CR>
+imap <C-s> <ESC>:w<CR>a
 
 "cerrar key map
 map <Leader>e :q<CR>
