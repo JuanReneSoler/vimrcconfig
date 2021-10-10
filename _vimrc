@@ -103,7 +103,7 @@ let g:dbext_default_profile = 'mySql'
 
 "nerdtree key maps
 map <Leader>t :NERDTreeFocus<CR>
-"imap <S-TAB> <ESC>:w<CR>:NERDTreeFocus<CR>
+imap <S-TAB> <ESC>:w<CR>:NERDTreeFocus<CR>
 
 "save changes key map
 "map <Leader>w :w<CR>
