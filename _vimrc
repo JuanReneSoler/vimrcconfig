@@ -102,8 +102,8 @@ let g:dbext_default_profile_mySql = 'type=SQLSRV:integratedlogin=1:srvname=deres
 let g:dbext_default_profile = 'mySql'
 
 "nerdtree key maps
-map <Leader>t :NERDTreeFocus<CR>R<CR>
-imap <S-TAB> <ESC>:w<CR>:NERDTreeFocus<CR>R<CR>
+map <Leader>t :NERDTreeFocus<CR>:NERDTreeRefreshRoot<CR>
+imap <S-TAB> <ESC>:w<CR>:NERDTreeFocus<cr>:NERDTreeRefreshRoot<CR>
 
 "save chan es key map
 "map <Leader>w :w<CR>
