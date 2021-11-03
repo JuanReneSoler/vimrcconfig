@@ -78,6 +78,11 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Unknown'   :'?',
                 \ }
 
+"OmniSharp config
+"let g:ale_linters = {
+" \ 'cs': ['OmniSharp']
+" \}
+
 "ALE config
 let g:ale_fix_on_save = 1
 let g:ale_sign_error = '*'
