@@ -107,7 +107,8 @@ imap <S-TAB> <ESC>:w<CR>:NERDTreeFocus<cr>:NERDTreeRefreshRoot<CR>
 
 "save chan es key map
 "map <Leader>w :w<CR>
-imap <C-s> <ESC>:w<CR>:OmniSharpRestartServer<CR>a
+"imap <C-s> <ESC>:w<CR>:OmniSharpRestartServer<CR>a
+imap <C-s> <ESC>:w<CR>a
 
 "cerrar key map
 map <Leader>e :q<CR>
