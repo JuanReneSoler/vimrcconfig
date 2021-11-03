@@ -20,7 +20,6 @@ Plug 'nickspoons/vim-sharpenup'
 " Linting/error highlighting
 Plug 'dense-analysis/ale'
 
-
 "Autocompletion
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'mattn/emmet-vim'
@@ -78,6 +77,11 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Clean'     :'✔︎',
                 \ 'Unknown'   :'?',
                 \ }
+
+"ALE config
+let g:ale_fix_on_save = 1
+let g:ale_sign_error = '*'
+let g:ale_sign_warning = '?'
 
 " devicons config
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
