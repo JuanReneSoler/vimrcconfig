@@ -52,7 +52,7 @@ set bs=indent,eol,start "setea las funcionalidades de la tecla backspace
 set t_Co=256 "configura la consola para que use 256 colores //necesario para usar gruvbox
 set background=dark "asigna color oscuro al background de la consola"
 set updatetime=1000
-
+"set autoread
 
 "Theme config
 colorscheme gruvbox "carga el tema
@@ -77,6 +77,11 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
                 \ 'Clean'     :'✔︎',
                 \ 'Unknown'   :'?',
                 \ }
+
+"OmniSharp config
+"let g:syntastic_cs_checkers = ['code_checker']
+let g:OmniSharp_highlighting = 3
+let g:OmniSharp_server_stdio = 1
 
 "ALE config
 let g:ale_fix_on_save = 1
