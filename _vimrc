@@ -95,6 +95,7 @@ let g:ale_linters = {
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['cs'] = 'c#'
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['js'] = 'js'
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['html'] = '</>'
 
 "Autocompletion
 let g:asyncomplete_auto_popup = 1
