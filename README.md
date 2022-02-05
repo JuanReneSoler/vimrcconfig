@@ -18,9 +18,10 @@ iwr -useb https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim |`
     ni $HOME/vimfiles/autoload/plug.vim -Force
 
 6) later:
-execute this command:
+execute batch install.bat:
 
-xcopy .\_vimrc $home\
+and execute
+pip3 install pynvim
 
 7) open vim and execute:
 
