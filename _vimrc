@@ -30,23 +30,23 @@ Plug 'shinchu/lightline-gruvbox.vim'
 Plug 'maximbaz/lightline-ale'
 
 "database
-Plug 'vim-scripts/dbext.vim'
+"Plug 'vim-scripts/dbext.vim'
 
 "javascript resaltado y syntax highlighting and improved indentation.
-Plug 'pangloss/vim-javascript'
+"Plug 'pangloss/vim-javascript'
 
 "typescript
-Plug 'leafgarland/typescript-vim'
+"Plug 'leafgarland/typescript-vim'
 
 "reactjs
-Plug 'mxw/vim-jsx'
+"Plug 'mxw/vim-jsx'
 "Plug 'MaxMEllon/vim-jsx-pretty'
 "Plug 'yuezk/vim-js'
 
 "autocompletion
-Plug 'Shougo/deoplete.nvim'
-Plug 'roxma/vim-hug-neovim-rpc'
-Plug 'roxma/nvim-yarp'
+"Plug 'Shougo/deoplete.nvim'
+"Plug 'roxma/vim-hug-neovim-rpc'
+"Plug 'roxma/nvim-yarp'
 
 call plug#end()
 
@@ -127,28 +127,28 @@ let g:user_emmet_leader_key='<Space>'
 let mapleader=" " "tecla lider para los atajos de teclado
 
 "dbext.vim conect to Microsoft SQL Server
-let g:dbext_default_profile_mySql = 'type=SQLSRV:integratedlogin=1:srvname=deresil-05\serversil:dbname=master'
-let g:dbext_default_profile = 'mySql'
+"let g:dbext_default_profile_mySql = 'type=SQLSRV:integratedlogin=1:srvname=deresil-05\serversil:dbname=master'
+"let g:dbext_default_profile = 'mySql'
 
 "ser vim-javascript
-let g:javascript_plugin_jsdoc = 1
-let g:javascript_plugin_ngdoc = 1
-let g:javascript_plugin_flow = 1
+"let g:javascript_plugin_jsdoc = 1
+"let g:javascript_plugin_ngdoc = 1
+"let g:javascript_plugin_flow = 1
 "augroup javascript_folding
 "    au!
 "    au FileType javascript setlocal foldmethod=syntax
 "augroup END
 
 "deople configuration
-let g:deoplete#enable_at_startup = 1
-call deoplete#custom#option({
-    \ 'auto_complete_delay': 0,
-    \ 'smart_case': v:true,
-    \ })
+"let g:deoplete#enable_at_startup = 1
+"call deoplete#custom#option({
+"    \ 'auto_complete_delay': 0,
+"    \ 'smart_case': v:true,
+"    \ })
 
 "configuration nvim-yarp
-let g:python3_host_prog = 'C:\Users\juanr\AppData\Local\Programs\Python\Python39\python.exe'
-let g:deoplete#enable_at_startup = 1
+"let g:python3_host_prog = 'C:\Users\juanr\AppData\Local\Programs\Python\Python39\python.exe'
+"let g:deoplete#enable_at_startup = 1
 
 "nerdtree key maps
 map <Leader>t :NERDTreeFocus<CR>:NERDTreeRefreshRoot<CR>
