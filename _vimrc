@@ -5,7 +5,6 @@ call plug#begin('~/vimfiles/plugged')
 Plug 'morhetz/gruvbox'
 "Plug 'gruvbox-community/gruvbox'
 
-
 "NerdTree Plug
 Plug 'preservim/nerdtree' |
             \ Plug 'Xuyuanp/nerdtree-git-plugin' |
@@ -32,21 +31,8 @@ Plug 'maximbaz/lightline-ale'
 "database
 "Plug 'vim-scripts/dbext.vim'
 
-"javascript resaltado y syntax highlighting and improved indentation.
-"Plug 'pangloss/vim-javascript'
-
-"typescript
-"Plug 'leafgarland/typescript-vim'
-
-"reactjs
-"Plug 'mxw/vim-jsx'
-"Plug 'MaxMEllon/vim-jsx-pretty'
-"Plug 'yuezk/vim-js'
-
-"autocompletion
-"Plug 'Shougo/deoplete.nvim'
-"Plug 'roxma/vim-hug-neovim-rpc'
-"Plug 'roxma/nvim-yarp'
+"javascrip resaltado de sintaxis
+Plug 'ternjs/tern_for_vim', { 'do' : 'npm install' }
 
 call plug#end()
 
@@ -69,6 +55,10 @@ set t_Co=256 "configura la consola para que use 256 colores //necesario para usa
 set background=dark "asigna color oscuro al background de la consola"
 set updatetime=1000
 "set autoread
+
+"autocompletion
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 
 "Theme config
 colorscheme gruvbox "carga el tema
@@ -129,26 +119,6 @@ let mapleader=" " "tecla lider para los atajos de teclado
 "dbext.vim conect to Microsoft SQL Server
 "let g:dbext_default_profile_mySql = 'type=SQLSRV:integratedlogin=1:srvname=deresil-05\serversil:dbname=master'
 "let g:dbext_default_profile = 'mySql'
-
-"ser vim-javascript
-"let g:javascript_plugin_jsdoc = 1
-"let g:javascript_plugin_ngdoc = 1
-"let g:javascript_plugin_flow = 1
-"augroup javascript_folding
-"    au!
-"    au FileType javascript setlocal foldmethod=syntax
-"augroup END
-
-"deople configuration
-"let g:deoplete#enable_at_startup = 1
-"call deoplete#custom#option({
-"    \ 'auto_complete_delay': 0,
-"    \ 'smart_case': v:true,
-"    \ })
-
-"configuration nvim-yarp
-"let g:python3_host_prog = 'C:\Users\juanr\AppData\Local\Programs\Python\Python39\python.exe'
-"let g:deoplete#enable_at_startup = 1
 
 "nerdtree key maps
 map <Leader>t :NERDTreeFocus<CR>:NERDTreeRefreshRoot<CR>
