@@ -120,19 +120,37 @@ let mapleader=" " "tecla lider para los atajos de teclado
 "let g:dbext_default_profile_mySql = 'type=SQLSRV:integratedlogin=1:srvname=deresil-05\serversil:dbname=master'
 "let g:dbext_default_profile = 'mySql'
 
+
 "nerdtree key maps
-map <Leader>t :NERDTreeFocus<CR>:NERDTreeRefreshRoot<CR>
-imap <S-TAB> <ESC>:w<CR>:NERDTreeFocus<cr>:NERDTreeRefreshRoot<CR>
+imap <Leader>t <ESC>:NERDTreeRefreshRoot<CR>:NERDTreeFocus<CR>
+nmap <Leader>t :NERDTreeRefreshRoot<CR>:NERDTreeFocus<CR>
 
 "save chan es key map
-"map <Leader>w :w<CR>
-imap <C-s> <ESC>:w<CR>a
+imap <Leader>s <ESC>:w<CR>a
+nmap <Leader>s :w<CR>
 
-"cerrar key map
-map <Leader>e :q<CR>
+"salir de vim - key map
+imap <Leader>ee <ESC>:q<CR>
+nmap <Leader>ee :q<CR>
+
+"undo changes
+imap <Leader>u <ESC>:u<CR>a
+
+"redo changes
+imap <Leader>r <ESC>:redo<CR>a
+
+"entrar en modo normal
+imap <Leader>e <ESC>
+
+"paste
+imap <Leader>v <ESC>p<CR>a
+
+"modo movimiento entre ventanas
+imap <Leader><TAB> <ESC><C-w>
+nmap <Leader><TAB> <C-w>
 
 "dbext.vim key mappings
-map <F5> <Space>se
+"map <F5> <Space>se
 
 
 
