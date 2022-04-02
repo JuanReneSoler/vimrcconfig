@@ -115,6 +115,7 @@ let g:user_emmet_leader_key='<Space>'
 
 "key maps
 let mapleader=" " "tecla lider para los atajos de teclado
+set timeoutlen=200
 
 "dbext.vim conect to Microsoft SQL Server
 "let g:dbext_default_profile_mySql = 'type=SQLSRV:integratedlogin=1:srvname=deresil-05\serversil:dbname=master'
