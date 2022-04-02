@@ -123,7 +123,7 @@ set timeoutlen=200
 
 
 "nerdtree key maps
-imap <Leader>t <ESC>:NERDTreeRefreshRoot<CR>:NERDTreeFocus<CR>
+imap <Leader>t <ESC>:w<CR>:NERDTreeRefreshRoot<CR>:NERDTreeFocus<CR>
 nmap <Leader>t :NERDTreeRefreshRoot<CR>:NERDTreeFocus<CR>
 
 "save chan es key map
