@@ -114,7 +114,7 @@ let g:user_emmet_leader_key='<Space>'
 
 "key maps
 let mapleader=" " "tecla lider para los atajos de teclado
-set timeoutlen=200
+"set timeoutlen=200
 
 "dbext.vim conect to Microsoft SQL Server
 "let g:dbext_default_profile_mySql = 'type=SQLSRV:integratedlogin=1:srvname=deresil-05\serversil:dbname=master'
@@ -122,32 +122,35 @@ set timeoutlen=200
 
 
 "nerdtree key maps
-imap <Leader>t <ESC>:w<CR>:NERDTreeRefreshRoot<CR>:NERDTreeFocus<CR>
-nmap <Leader>t :NERDTreeRefreshRoot<CR>:NERDTreeFocus<CR>
+"imap <Leader>t <ESC>:w<CR>:NERDTreeRefreshRoot<CR>:NERDTreeFocus<CR>
+"nmap <Leader>t :NERDTreeRefreshRoot<CR>:NERDTreeFocus<CR>
+nmap <Leader><TAB> :NERDTreeFocus
+nmap <Leader><TAB><TAB> :NERDTreeRefreshRoot
+nmap <Leader><ESC> :NERDTreeClose
 
 "save chan es key map
-imap <Leader>s <ESC>:w<CR>a
-nmap <Leader>s :w<CR>
+"imap <Leader>s <ESC>:w<CR>a
+"nmap <Leader>s :w<CR>
 
 "salir de vim - key map
-imap <Leader>ee <ESC>:q<CR>
-nmap <Leader>ee :q<CR>
+"imap <Leader>ee <ESC>:q<CR>
+"nmap <Leader>ee :q<CR>
 
 "undo changes
-imap <Leader>u <ESC>:u<CR>a
+"imap <Leader>u <ESC>:u<CR>a
 
 "redo changes
-imap <Leader>r <ESC>:redo<CR>a
+"imap <Leader>r <ESC>:redo<CR>a
 
 "entrar en modo normal
-imap <Leader>e <ESC>
+"imap <Leader>e <ESC>
 
 "paste
-imap <Leader>v <ESC>p<CR>a
+"imap <Leader>v <ESC>p<CR>a
 
 "modo movimiento entre ventanas
-imap <Leader><TAB> <ESC><C-w>
-nmap <Leader><TAB> <C-w>
+"imap <Leader><TAB> <ESC><C-w>
+"nmap <Leader><TAB> <C-w>
 
 "dbext.vim key mappings
 "map <F5> <Space>se
