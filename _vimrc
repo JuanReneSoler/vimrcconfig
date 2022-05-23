@@ -45,7 +45,7 @@ set ruler "setea que se muestre la posicion en la que esta el cursor
 set cursorline "marca la linea en la que se encuentra el cursor
 set encoding=utf-8 "setea en encoding de archivos
 set showmatch "setea el parentesis que cierra al posicionarte sobre alguno
-set sw=2 "setea el numero de espacios por indentacion
+set sw=4 "setea el numero de espacios por indentacion
 "set relativenumber "setea que se muestren las lineas por debajo y por encima de la posicion del cursor
 set laststatus=2 "setear que la barra iferior siempre sea visible
 set noshowmode "setea que la barra de comandos no se muestre en el modo insertar
@@ -54,6 +54,18 @@ set t_Co=256 "configura la consola para que use 256 colores //necesario para usa
 set background=dark "asigna color oscuro al background de la consola"
 set updatetime=1000
 "set autoread
+set autoindent
+"
+"references charts of values:
+"	Ps = 0 -> blinking block.
+"	Ps = 1 -> blinking block (default).
+"	Ps = 2 -> steady block.
+"	Ps = 3 -> blinking underline.
+"	Ps = 4 -> steady underline.
+"	Ps = 5 -> blinking bar (xterm).
+"	Ps = 6 -> steady bar (xterm).
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
 
 "autocompletion
 filetype plugin on
