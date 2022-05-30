@@ -31,7 +31,7 @@ Plug 'maximbaz/lightline-ale'
 "Plug 'vim-scripts/dbext.vim'
 
 "javascrip resaltado de sintaxis
-Plug 'ternjs/tern_for_vim', { 'do' : 'npm install' }
+"Plug 'ternjs/tern_for_vim', { 'do' : 'npm install' }
 
 call plug#end()
 
