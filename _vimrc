@@ -54,7 +54,7 @@ set t_Co=256 "configura la consola para que use 256 colores //necesario para usa
 set background=dark "asigna color oscuro al background de la consola"
 set updatetime=1000
 "set autoread
-set autoindent
+"set autoindent
 "
 "references charts of values:
 "	Ps = 0 -> blinking block.
@@ -77,7 +77,7 @@ let g:gruvbox_contrast_dark="hard"
 
 "NERDTree configuration
 let NERDTreeQuitOnOpen=1 "cierra nerdtree automaticamente se habre un archivo
-let g:NERDTreeWinSize=40 "modifica el ancho de la ventana de NERDTree
+let g:NERDTreeWinSize=50 "modifica el ancho de la ventana de NERDTree
 let g:NERDTreeDirArrowExpandable = '▸' "caracter asignado cuando un directorio esta cerrado
 let g:NERDTreeDirArrowCollapsible = '▾' "caracter asignado para cuando un directorio esta abierto
 
