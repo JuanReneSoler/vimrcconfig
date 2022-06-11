@@ -1,5 +1,5 @@
 "cargando pluggind con el gestor de paquetes Plug
-call plug#begin('~/vimfiles/plugged')
+call plug#begin('~/.vim/plugged')
 
 "Theme (gruvbox)
 Plug 'morhetz/gruvbox'
