@@ -8,6 +8,8 @@ Plug  'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 call plug#end()
 
@@ -40,3 +42,7 @@ nmap <Leader><TAB> :NERDTreeFocus
 nmap <Leader><TAB><TAB> :NERDTreeRefreshRoot
 nmap <Leader><ESC> :NERDTreeClose
 autocmd BufNewFile,BufRead *.js,*.jsx,*.tsx set filetype=typescriptreact
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsEditSplit="vertical"
