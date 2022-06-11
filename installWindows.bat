@@ -1,6 +1,6 @@
 
 
-mklink %homepath%\_vimrc %cd%\_vimrc  
+mklink %homepath%\_vimrc %cd%\vimrc  
 
 
 
