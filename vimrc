@@ -3,7 +3,7 @@ call plug#begin('~/vimplugins')
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'OmniSharp/omnisharp-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'} ":CocInstall coc-json coc-tsserver
 Plug  'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
