@@ -10,6 +10,8 @@ Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'puremourning/vimspector' "para debuger C# => :VimspectorInstall netcoredbg
+ 			       "parar javascript y demas ir a github
 
 call plug#end()
 
@@ -46,3 +48,4 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
+let g:vimspector_enable_mappings = 'HUMAN'
