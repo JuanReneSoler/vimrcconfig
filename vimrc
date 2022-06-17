@@ -6,6 +6,7 @@ Plug 'OmniSharp/omnisharp-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} ":CocInstall coc-json coc-tsserver coc-omnisharp
 						"dotnet tool install --global csharp-ls
 Plug 'mattn/emmet-vim'
+Plug 'jlcrochet/vim-razor'
 Plug  'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
@@ -30,8 +31,8 @@ set clipboard=unnamedplus
 set cursorline
 set colorcolumn=130
 set laststatus=2 "barra inferior siempre visiable
-"syntax enable
-"syntax sync fromstart
+syntax enable
+syntax sync fromstart
 set showcmd
 set showmatch "setea el parentesis que cierra al posicionarte sobre alguno
 set matchtime=3
@@ -85,8 +86,8 @@ let g:UltiSnipsEditSplit="vertical"
 let g:vimspector_enable_mappings = 'HUMAN'
 
 "emmet configuracion
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+let g:user_emmet_install_global = 1
+autocmd FileType html,htm,css,cshtml,cshtm EmmetInstall
 let g:user_emmet_leader_key='<Space>'
 
 
