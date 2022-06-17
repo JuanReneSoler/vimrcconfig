@@ -30,10 +30,8 @@ set bs=indent,eol,start
 set clipboard=unnamedplus
 set cursorline
 set colorcolumn=130
-set laststatus=2 "barra inferior siempre visiable
 syntax enable
 syntax sync fromstart
-set showcmd
 set showmatch "setea el parentesis que cierra al posicionarte sobre alguno
 set matchtime=3
 set sw=4 "espacios por indentacion
@@ -62,11 +60,6 @@ let g:OmniSharp_server_stdio = 1
 let g:OmniSharp_server_use_mono = 1
 let g:OmniSharp_server_use_net6 = 1
 let g:OmniSharp_highlighting = 3
-let g:OmniSharp_highlight_groups = {
-\ 'Comment': 'NonText',
-\ 'XmlDocCommentName': 'Identifier',
-\ 'XmlDocCommentText': 'NonText'
-\}
 
 " Coc GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
