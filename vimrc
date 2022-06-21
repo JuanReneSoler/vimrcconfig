@@ -27,7 +27,7 @@ set t_Co=256
 set number
 set mouse=a
 set bs=indent,eol,start
-set clipboard=unnamedplus
+set clipboard=unnamed
 set cursorline
 set colorcolumn=130
 syntax enable
