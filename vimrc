@@ -38,6 +38,10 @@ set sw=4 "espacios por indentacion
 set background=dark
 set updatetime=300
 
+syntax region csregion start=/#region/ end=/#endregion/
+highlight csregion guibg=Yellow
+setlocal foldmethod=syntax
+
 "comprtamiento del cursor en modo normal e insertar
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
@@ -54,6 +58,7 @@ let mapleader=" "
 nmap <Leader><TAB> :NERDTreeFocus
 nmap <Leader><TAB><TAB> :NERDTreeRefreshRoot
 nmap <Leader><ESC> :NERDTreeClose
+nmap <Leader>kd <ESC>:OmniSharpCodeFormat
 
 "omnisharp configuracion
 let g:OmniSharp_server_stdio = 1
