@@ -40,7 +40,7 @@ set updatetime=300
 
 syntax region csregion start=/#region/ end=/#endregion/
 highlight csregion guibg=Yellow
-setlocal foldmethod=syntax
+autocmd Syntax cs,js setlocal foldmethod=syntax
 
 "comprtamiento del cursor en modo normal e insertar
 let &t_SI = "\e[6 q"
