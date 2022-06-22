@@ -1,7 +1,9 @@
 call plug#begin('~/vimplugins')
 
 Plug 'morhetz/gruvbox'
-Plug 'preservim/nerdtree'
+Plug 'preservim/nerdtree' 
+Plug 'ryanoasis/vim-devicons' 
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} ":CocInstall coc-json coc-tsserver coc-omnisharp
 						"dotnet tool install --global csharp-ls
@@ -16,13 +18,14 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
+
 "debuger
 Plug 'puremourning/vimspector' "para debuger C# => :VimspectorInstall netcoredbg
  			       "parar javascript y demas ir a github
 
 call plug#end()
 
-set encoding=utf-8
+set encoding=UTF-8
 set t_Co=256
 set number
 set mouse=a
@@ -34,12 +37,16 @@ syntax enable
 syntax sync fromstart
 set showmatch "setea el parentesis que cierra al posicionarte sobre alguno
 set matchtime=3
+set autoindent
 set sw=4 "espacios por indentacion
 set background=dark
 set updatetime=300
+set laststatus=2
+set showcmd
+set ruler
 
 syntax region csregion start=/#region/ end=/#endregion/
-highlight csregion guibg=Yellow
+"highlight csregion guibg=Yellow
 autocmd Syntax cs,js setlocal foldmethod=syntax
 
 "comprtamiento del cursor en modo normal e insertar
@@ -54,6 +61,7 @@ let NERDTreeQuitOnOpen=1
 let g:NERDTreeWinSize=50 
 let g:NERDTreeDirArrowExpandable = '▸' 
 let g:NERDTreeDirArrowCollapsible = '▾' 
+
 let mapleader=" "
 nmap <Leader><TAB> :NERDTreeFocus
 nmap <Leader><TAB><TAB> :NERDTreeRefreshRoot
@@ -88,5 +96,7 @@ let g:user_emmet_install_global = 1
 autocmd FileType html,htm,css,cshtml,cshtm EmmetInstall
 let g:user_emmet_leader_key='<Space>'
 
-
-
+"devIcons configuration
+let g:WebDevIconsNerdTreeGitPluginForceVAlign="on"
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['cs'] = 'c#'
