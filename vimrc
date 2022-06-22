@@ -3,7 +3,7 @@ call plug#begin('~/vimplugins')
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree' 
 Plug 'ryanoasis/vim-devicons' 
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'Xuyuanp/nerdtree-git-plugin' "Install NerdFonts
 Plug 'OmniSharp/omnisharp-vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'} ":CocInstall coc-json coc-tsserver coc-omnisharp
 						"dotnet tool install --global csharp-ls
@@ -13,7 +13,6 @@ Plug  'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
 Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-
 "snips
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
