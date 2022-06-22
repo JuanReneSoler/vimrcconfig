@@ -98,4 +98,4 @@ let g:user_emmet_leader_key='<Space>'
 "devIcons configuration
 let g:WebDevIconsNerdTreeGitPluginForceVAlign="on"
 let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols = {} " needed
-let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['cs'] = 'c#'
+let g:WebDevIconsUnicodeDecorateFileNodesExtensionSymbols['cs'] = 'C#'
