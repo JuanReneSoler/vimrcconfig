@@ -65,7 +65,8 @@ let mapleader=" "
 nmap <Leader><TAB> :NERDTreeFocus
 nmap <Leader><TAB><TAB> :NERDTreeRefreshRoot
 nmap <Leader><ESC> :NERDTreeClose
-nmap <Leader>kd <ESC>:OmniSharpCodeFormat
+nmap <Leader>of <ESC>:OmniSharpCodeFormat
+nmap <Leader>oca <ESC>:OmniSharpGetCodeActions
 
 "omnisharp configuracion
 let g:OmniSharp_server_stdio = 1
