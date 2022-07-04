@@ -94,7 +94,7 @@ let g:vimspector_enable_mappings = 'HUMAN'
 "emmet configuracion
 let g:user_emmet_install_global = 1
 autocmd FileType html,htm,css,cshtml,cshtm EmmetInstall
-let g:user_emmet_leader_key='<Space>'
+let g:user_emmet_leader_key='<Tab>'
 
 "devIcons configuration
 let g:WebDevIconsNerdTreeGitPluginForceVAlign="on"
