@@ -70,11 +70,7 @@ nmap <Leader>oca <ESC>:OmniSharpGetCodeActions
 
 "omnisharp configuracion
 let g:OmniSharp_server_stdio = 1
-
-if has("win32")
-    let g:OmniSharp_server_use_mono = 1
-endif
-
+let g:OmniSharp_server_use_mono = 1
 let g:OmniSharp_server_use_net6 = 1
 let g:OmniSharp_highlighting = 3
 
