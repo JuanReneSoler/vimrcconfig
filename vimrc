@@ -5,8 +5,7 @@ Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons' 
 Plug 'Xuyuanp/nerdtree-git-plugin' "Install NerdFonts
 Plug 'OmniSharp/omnisharp-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'} ":CocInstall coc-json coc-tsserver coc-omnisharp
-						"dotnet tool install --global csharp-ls
+Plug 'neoclide/coc.nvim', {'branch': 'release'} "dotnet tool install --global csharp-ls
 Plug 'mattn/emmet-vim'
 Plug 'jlcrochet/vim-razor'
 Plug  'pangloss/vim-javascript'
@@ -98,3 +97,6 @@ let g:user_emmet_leader_key='<Tab>'
 
 "devIcons configuration
 let g:WebDevIconsNerdTreeGitPluginForceVAlign="on"
+
+"coc configuration
+let g:coc_global_extensions=[ 'coc-omnisharp', 'coc-json', 'coc-tsserver' ]
