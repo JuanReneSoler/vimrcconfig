@@ -1,1 +1,1 @@
-mklink %homepath%\_vimrc %cd%\vimrc  
+mklink %homepath%\_vimrc %cd%\vimrcWindows  

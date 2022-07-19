@@ -5,15 +5,7 @@ Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons' 
 Plug 'Xuyuanp/nerdtree-git-plugin' "Install NerdFonts
 Plug 'OmniSharp/omnisharp-vim'
-
-if has("unix")
-    Plug 'neoclide/coc.nvim', {'branch': 'release'} "dotnet tool install --global csharp-ls
-else
-    if has("win32")
-	Plug 'prabirshrestha/asyncomplete.vim'
-    endif
-endif
-
+Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'mattn/emmet-vim'
 Plug 'jlcrochet/vim-razor'
 Plug  'pangloss/vim-javascript'
@@ -23,8 +15,6 @@ Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 "snips
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
-
-
 "debuger
 Plug 'puremourning/vimspector' "para debuger C# => :VimspectorInstall netcoredbg
  			       "parar javascript y demas ir a github
@@ -78,17 +68,6 @@ nmap <Leader>oca <ESC>:OmniSharpGetCodeActions
 "omnisharp configuracion
 let g:OmniSharp_server_stdio = 1
 let g:OmniSharp_highlighting = 3
-if has("unix")
-    "omnisharp configuracion   
-    let g:OmniSharp_server_use_mono = 0
-    let g:OmniSharp_server_use_net6 = 1
-    
-    " Coc GoTo code navigation.
-    nmap <silent> gd <Plug>(coc-definition)
-    nmap <silent> gy <Plug>(coc-type-definition)
-    nmap <silent> gi <Plug>(coc-implementation)
-    nmap <silent> gr <Plug>(coc-references)
-endif
 
 "
 autocmd BufNewFile,BufRead *.js,*.jsx,*.tsx set filetype=typescriptreact
@@ -109,16 +88,8 @@ let g:user_emmet_leader_key='<Tab>'
 "devIcons configuration
 let g:WebDevIconsNerdTreeGitPluginForceVAlign="on"
 
-"coc configuration
-
-if has("unix")
-    let g:coc_global_extensions=[ 'coc-omnisharp', 'coc-json', 'coc-tsserver' ]
-else
-    if has("win32")
-        "Autocompletion
-        let g:asyncomplete_auto_popup = 1
-        let g:asyncomplete_auto_completeopt = 0
-        set completeopt=menuone,noinsert,noselect,popuphidden "controla los menu de autocomplecion que salen
-    endif
-endif
+"Autocompletion
+let g:asyncomplete_auto_popup = 1
+let g:asyncomplete_auto_completeopt = 0
+set completeopt=menuone,noinsert,noselect,popuphidden "controla los menu de autocomplecion que salen
 
