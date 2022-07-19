@@ -77,15 +77,18 @@ nmap <Leader>oca <ESC>:OmniSharpGetCodeActions
 
 "omnisharp configuracion
 let g:OmniSharp_server_stdio = 1
-let g:OmniSharp_server_use_mono = 0
-let g:OmniSharp_server_use_net6 = 1
 let g:OmniSharp_highlighting = 3
-
-" Coc GoTo code navigation.
-nmap <silent> gd <Plug>(coc-definition)
-nmap <silent> gy <Plug>(coc-type-definition)
-nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
+if has("unix")
+    "omnisharp configuracion   
+    let g:OmniSharp_server_use_mono = 0
+    let g:OmniSharp_server_use_net6 = 1
+    
+    " Coc GoTo code navigation.
+    nmap <silent> gd <Plug>(coc-definition)
+    nmap <silent> gy <Plug>(coc-type-definition)
+    nmap <silent> gi <Plug>(coc-implementation)
+    nmap <silent> gr <Plug>(coc-references)
+endif
 
 "
 autocmd BufNewFile,BufRead *.js,*.jsx,*.tsx set filetype=typescriptreact
@@ -107,4 +110,15 @@ let g:user_emmet_leader_key='<Tab>'
 let g:WebDevIconsNerdTreeGitPluginForceVAlign="on"
 
 "coc configuration
-let g:coc_global_extensions=[ 'coc-omnisharp', 'coc-json', 'coc-tsserver' ]
+
+if has("unix")
+    let g:coc_global_extensions=[ 'coc-omnisharp', 'coc-json', 'coc-tsserver' ]
+else
+    if has("win32")
+        "Autocompletion
+        let g:asyncomplete_auto_popup = 1
+        let g:asyncomplete_auto_completeopt = 0
+        set completeopt=menuone,noinsert,noselect,popuphidden "controla los menu de autocomplecion que salen
+    endif
+endif
+
