@@ -5,7 +5,15 @@ Plug 'preservim/nerdtree'
 Plug 'ryanoasis/vim-devicons' 
 Plug 'Xuyuanp/nerdtree-git-plugin' "Install NerdFonts
 Plug 'OmniSharp/omnisharp-vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'} "dotnet tool install --global csharp-ls
+
+if has("unix")
+    Plug 'neoclide/coc.nvim', {'branch': 'release'} "dotnet tool install --global csharp-ls
+else
+    if has("win32")
+	Plug 'prabirshrestha/asyncomplete.vim'
+    endif
+endif
+
 Plug 'mattn/emmet-vim'
 Plug 'jlcrochet/vim-razor'
 Plug  'pangloss/vim-javascript'
